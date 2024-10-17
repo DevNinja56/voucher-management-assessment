@@ -13,7 +13,7 @@ const swaggerDefinition = {
     {
       url:
         process.env.NODE_ENV === "production"
-          ? `https://voucher-management-48953c18374d.herokuapp.com/api`
+          ? `https://voucher-management-72c4821a0bb0.herokuapp.com/api`
           : `http://localhost/${envConstants.Port}/api`,
     },
   ],
