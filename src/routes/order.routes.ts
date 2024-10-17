@@ -35,18 +35,18 @@ const router = Router();
  *     summary: Create a new order.
  *     description: >
  *       This endpoint allows users to create a new order by providing the required details such as
- *       user ID, product ID, quantity, and total amount. Optional voucher and promotion IDs can also be
+ *       product ID and quantity. Optional voucher and promotion IDs can also be
  *       provided.
  *
  *       The following rules apply:
  *       - A voucher or promotion cannot be used more than once in a single order.
- *       - If both a voucher and a promotion are provided, the request will return an error.
+ *       - Maximum discount cannot exceed 50% of the total order value.
  *       - Vouchers are validated for expiration and usage limits.
  *       - Promotions are checked against eligibility criteria, including expiration dates, usage limits,
  *         and applicable product categories.
  *
  *       If valid:
- *       - The order total may be reduced based on the discount specified by the voucher or promotion.
+ *       - The order total may be reduced based on the discount specified by the voucher, promotion.
  *     tags: [Orders]
  *     requestBody:
  *       required: true
